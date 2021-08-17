@@ -1,0 +1,201 @@
+|DUT
+input_vector[0] => Decoder3to8:add_instance.E
+input_vector[1] => Decoder3to8:add_instance.A0
+input_vector[2] => Decoder3to8:add_instance.A1
+input_vector[3] => Decoder3to8:add_instance.A2
+output_vector[0] << Decoder3to8:add_instance.Y0
+output_vector[1] << Decoder3to8:add_instance.Y1
+output_vector[2] << Decoder3to8:add_instance.Y2
+output_vector[3] << Decoder3to8:add_instance.Y3
+output_vector[4] << Decoder3to8:add_instance.Y4
+output_vector[5] << Decoder3to8:add_instance.Y5
+output_vector[6] << Decoder3to8:add_instance.Y6
+output_vector[7] << Decoder3to8:add_instance.Y7
+
+
+|DUT|Decoder3to8:add_instance
+A2 => INVERTER:notA2.A
+A2 => AND_2:selectI4toI7.A
+A1 => Decoder2to4:I0toI3.A1
+A1 => Decoder2to4:I4toI7.A1
+A0 => Decoder2to4:I0toI3.A0
+A0 => Decoder2to4:I4toI7.A0
+E => AND_2:selectIotoI3.B
+E => AND_2:selectI4toI7.B
+Y7 <= Decoder2to4:I4toI7.Y3
+Y6 <= Decoder2to4:I4toI7.Y2
+Y5 <= Decoder2to4:I4toI7.Y1
+Y4 <= Decoder2to4:I4toI7.Y0
+Y3 <= Decoder2to4:I0toI3.Y3
+Y2 <= Decoder2to4:I0toI3.Y2
+Y1 <= Decoder2to4:I0toI3.Y1
+Y0 <= Decoder2to4:I0toI3.Y0
+
+
+|DUT|Decoder3to8:add_instance|INVERTER:notA2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|AND_2:selectIotoI3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|AND_2:selectI4toI7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I0toI3
+A1 => INVERTER:notA1.A
+A1 => AND_2:Y3and.A
+A1 => AND_2:Y2and.A
+A0 => INVERTER:notA0.A
+A0 => AND_2:Y3and.B
+A0 => AND_2:Y1and.B
+E => AND_2:Y_3and.B
+E => AND_2:Y_2and.B
+E => AND_2:Y_1and.B
+E => AND_2:Y_0and.B
+Y3 <= AND_2:Y_3and.Y
+Y2 <= AND_2:Y_2and.Y
+Y1 <= AND_2:Y_1and.Y
+Y0 <= AND_2:Y_0and.Y
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I0toI3|INVERTER:notA1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I0toI3|INVERTER:notA0
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I0toI3|AND_2:Y3and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I0toI3|AND_2:Y2and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I0toI3|AND_2:Y1and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I0toI3|AND_2:Y0and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I0toI3|AND_2:Y_3and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I0toI3|AND_2:Y_2and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I0toI3|AND_2:Y_1and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I0toI3|AND_2:Y_0and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I4toI7
+A1 => INVERTER:notA1.A
+A1 => AND_2:Y3and.A
+A1 => AND_2:Y2and.A
+A0 => INVERTER:notA0.A
+A0 => AND_2:Y3and.B
+A0 => AND_2:Y1and.B
+E => AND_2:Y_3and.B
+E => AND_2:Y_2and.B
+E => AND_2:Y_1and.B
+E => AND_2:Y_0and.B
+Y3 <= AND_2:Y_3and.Y
+Y2 <= AND_2:Y_2and.Y
+Y1 <= AND_2:Y_1and.Y
+Y0 <= AND_2:Y_0and.Y
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I4toI7|INVERTER:notA1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I4toI7|INVERTER:notA0
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I4toI7|AND_2:Y3and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I4toI7|AND_2:Y2and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I4toI7|AND_2:Y1and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I4toI7|AND_2:Y0and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I4toI7|AND_2:Y_3and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I4toI7|AND_2:Y_2and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I4toI7|AND_2:Y_1and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Decoder3to8:add_instance|Decoder2to4:I4toI7|AND_2:Y_0and
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
