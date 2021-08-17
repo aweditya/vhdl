@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Tue Aug 17 15:40:41 2021
+Tue Aug 17 16:31:20 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Aug 17 15:40:41 2021       ;
+; Analysis & Synthesis Status ; Successful - Tue Aug 17 16:31:20 2021       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; DUT                                         ;
@@ -192,7 +192,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+---------------+--------------+
 ; |DUT                            ; 1 (0)       ; 0            ; 0          ; 5    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                                     ; DUT           ; work         ;
 ;    |VowelDetector:add_instance| ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|VowelDetector:add_instance          ; VowelDetector ; work         ;
-;       |AND_2:o4|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|VowelDetector:add_instance|AND_2:o4 ; AND_2         ; work         ;
+;       |NOR_2:o4|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|VowelDetector:add_instance|NOR_2:o4 ; NOR_2         ; work         ;
 +---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -218,7 +218,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Aug 17 15:40:23 2021
+    Info: Processing started: Tue Aug 17 16:31:04 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VowelDetector -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -251,18 +251,17 @@ Info (12021): Found 2 design units, including 1 entities, in source file VowelDe
     Info (12023): Found entity 1: VowelDetector File: /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd Line: 9
 Info (12127): Elaborating entity "DUT" for the top level hierarchy
 Info (12128): Elaborating entity "VowelDetector" for hierarchy "VowelDetector:add_instance" File: /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/DUT.vhd Line: 21
-Info (12128): Elaborating entity "NAND_2" for hierarchy "VowelDetector:add_instance|NAND_2:o1" File: /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd Line: 20
+Info (12128): Elaborating entity "AND_2" for hierarchy "VowelDetector:add_instance|AND_2:o1" File: /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd Line: 20
 Info (12128): Elaborating entity "XOR_2" for hierarchy "VowelDetector:add_instance|XOR_2:o2" File: /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd Line: 23
-Info (12128): Elaborating entity "INVERTER" for hierarchy "VowelDetector:add_instance|INVERTER:o3" File: /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd Line: 26
-Info (12128): Elaborating entity "AND_2" for hierarchy "VowelDetector:add_instance|AND_2:o4" File: /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd Line: 29
+Info (12128): Elaborating entity "NOR_2" for hierarchy "VowelDetector:add_instance|NOR_2:o4" File: /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd Line: 26
 Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 399 megabytes
-    Info: Processing ended: Tue Aug 17 15:40:41 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Processing ended: Tue Aug 17 16:31:20 2021
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:39
 
 

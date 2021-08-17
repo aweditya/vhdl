@@ -14,17 +14,14 @@ end entity VowelDetector;
 
 -- Structural Description of the Vowel Detector
 architecture Struct of VowelDetector is
-	signal X3_nand_X2, X3_nand_X2_xor_X1, not_X0: std_logic;
+	signal X2_and_X3, X1_xor_X2_and_X3: std_logic;
 begin
-	-- Compute X3 NAND X2
-	o1 : NAND_2 port map(A => X3, B => X2, Y => X3_nand_X2);
+	-- Compute X2 AND X3
+	o1 : AND_2 port map(A => X2, B => X3, Y => X2_and_X3);
 	
-	-- Compute (X3 NAND X2) XOR X1
-	o2 : XOR_2 port map(A => X3_nand_X2, B => X1, Y => X3_nand_X2_xor_X1);
-
-	-- Invert X0
-	o3 : INVERTER port map(A => X0, Y => not_X0);
+	-- Compute X1 XOR (X2 AND X3)
+	o2 : XOR_2 port map(A => X1, B => X2_and_X3, Y => X1_xor_X2_and_X3);
 	
 	-- Compute the final answer
-	o4 : AND_2 port map(A => X3_nand_X2_xor_X1, B => not_X0, Y => Y);
+	o4 : NOR_2 port map(A => X0, B => X1_xor_X2_and_X3, Y => Y);
 end Struct;

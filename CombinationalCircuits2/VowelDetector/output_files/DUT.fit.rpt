@@ -1,5 +1,5 @@
 Fitter report for DUT
-Tue Aug 17 15:40:43 2021
+Tue Aug 17 16:31:22 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Tue Aug 17 15:40:43 2021       ;
+; Fitter Status         ; Successful - Tue Aug 17 16:31:22 2021       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; DUT                                         ;
 ; Top-level Entity Name ; DUT                                         ;
@@ -414,7 +414,7 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+---------------+--------------+
 ; |DUT                            ; 1 (0)       ; 0            ; 0          ; 5    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                                     ; DUT           ; work         ;
 ;    |VowelDetector:add_instance| ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|VowelDetector:add_instance          ; VowelDetector ; work         ;
-;       |AND_2:o4|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|VowelDetector:add_instance|AND_2:o4 ; AND_2         ; work         ;
+;       |NOR_2:o4|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|VowelDetector:add_instance|NOR_2:o4 ; NOR_2         ; work         ;
 +---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -571,9 +571,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/output_files/DUT.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 525 megabytes
-    Info: Processing ended: Tue Aug 17 15:40:43 2021
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 527 megabytes
+    Info: Processing ended: Tue Aug 17 16:31:22 2021
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

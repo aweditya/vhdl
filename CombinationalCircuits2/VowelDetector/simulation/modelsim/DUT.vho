@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "08/17/2021 15:40:48"
+-- DATE "08/17/2021 16:31:28"
 
 -- 
 -- Device: Altera 5M1270ZT144C5 Package TQFP144
@@ -35,7 +35,7 @@ USE MAXV.MAXV_COMPONENTS.ALL;
 ENTITY 	DUT IS
     PORT (
 	input_vector : IN std_logic_vector(3 DOWNTO 0);
-	output_vector : OUT std_logic_vector(0 DOWNTO 0)
+	output_vector : BUFFER std_logic_vector(0 DOWNTO 0)
 	);
 END DUT;
 
@@ -54,9 +54,9 @@ SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_input_vector : std_logic_vector(3 DOWNTO 0);
 SIGNAL ww_output_vector : std_logic_vector(0 DOWNTO 0);
-SIGNAL \add_instance|o4|Y~combout\ : std_logic;
+SIGNAL \add_instance|o4|Y~0_combout\ : std_logic;
 SIGNAL \input_vector~combout\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \add_instance|o4|ALT_INV_Y~combout\ : std_logic;
+SIGNAL \add_instance|o4|ALT_INV_Y~0_combout\ : std_logic;
 
 BEGIN
 
@@ -65,7 +65,7 @@ output_vector <= ww_output_vector;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\add_instance|o4|ALT_INV_Y~combout\ <= NOT \add_instance|o4|Y~combout\;
+\add_instance|o4|ALT_INV_Y~0_combout\ <= NOT \add_instance|o4|Y~0_combout\;
 
 -- Location: PIN_143,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \input_vector[2]~I\ : maxv_io
@@ -112,9 +112,9 @@ PORT MAP (
 	combout => \input_vector~combout\(0));
 
 -- Location: LC_X2_Y10_N2
-\add_instance|o4|Y\ : maxv_lcell
+\add_instance|o4|Y~0\ : maxv_lcell
 -- Equation(s):
--- \add_instance|o4|Y~combout\ = (\input_vector~combout\(0)) # (\input_vector~combout\(1) $ (((\input_vector~combout\(2) & \input_vector~combout\(3)))))
+-- \add_instance|o4|Y~0_combout\ = (\input_vector~combout\(0)) # (\input_vector~combout\(1) $ (((\input_vector~combout\(2) & \input_vector~combout\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -132,7 +132,7 @@ PORT MAP (
 	datad => \input_vector~combout\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \add_instance|o4|Y~combout\);
+	combout => \add_instance|o4|Y~0_combout\);
 
 -- Location: PIN_142,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \output_vector[0]~I\ : maxv_io
@@ -141,7 +141,7 @@ GENERIC MAP (
 	operation_mode => "output")
 -- pragma translate_on
 PORT MAP (
-	datain => \add_instance|o4|ALT_INV_Y~combout\,
+	datain => \add_instance|o4|ALT_INV_Y~0_combout\,
 	oe => VCC,
 	padio => ww_output_vector(0));
 END structure;

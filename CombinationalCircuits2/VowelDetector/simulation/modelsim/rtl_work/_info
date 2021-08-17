@@ -23,9 +23,9 @@ Vjk<OL6zCUimQ`DQm21`]c3
 !s100 Yj`7PWP[TV[j49Ro63QYd3
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1629195862
+Z7 !s110 1629198486
 !i10b 1
-Z8 !s108 1629195862.000000
+Z8 !s108 1629198486.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Gates.vhd|
 Z10 !s107 /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Gates.vhd|
 !i113 1
@@ -332,10 +332,10 @@ V]iKK_Z9L:G9B:i8c]3eFH0
 !s100 bWf8kl8zb90X@P1m>V^K20
 R6
 31
-Z21 !s110 1629195863
+Z21 !s110 1629198487
 !i10b 1
-R8
-Z22 !s90 -reportprogress|300|-93|-work|work|/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Testbench.vhd|
+Z22 !s108 1629198487.000000
+Z23 !s90 -reportprogress|300|-93|-work|work|/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Testbench.vhd|
 !s107 /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Testbench.vhd|
 !i113 1
 R11
@@ -353,21 +353,21 @@ R6
 31
 R21
 !i10b 1
-R8
 R22
-Z23 !s107 /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Testbench.vhd|
+R23
+Z24 !s107 /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Testbench.vhd|
 !i113 1
 R11
 R12
 Evoweldetector
-Z24 w1629194895
-Z25 DPx4 work 5 gates 0 22 G6b:H?Z:RCXD<c0GDO6OD2
+Z25 w1629198061
+Z26 DPx4 work 5 gates 0 22 G6b:H?Z:RCXD<c0GDO6OD2
 R2
 R3
 !i122 2
 R0
-Z26 8/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd
-Z27 F/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd
+Z27 8/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd
+Z28 F/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd
 l0
 L9 1
 VCQg[ZRS0ZzaSWo==Jb@9k3
@@ -377,28 +377,28 @@ R6
 R7
 !i10b 1
 R8
-Z28 !s90 -reportprogress|300|-93|-work|work|/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd|
-Z29 !s107 /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd|
+Z29 !s90 -reportprogress|300|-93|-work|work|/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd|
+Z30 !s107 /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd|
 !i113 1
 R11
 R12
 Astruct
-R25
+R26
 R2
 R3
 DEx4 work 13 voweldetector 0 22 CQg[ZRS0ZzaSWo==Jb@9k3
 !i122 2
 l18
-L16 15
-VhO`EHAk[kd9SiELU0SMPE1
-!s100 GzSX^egMLEGaoRjIjHHDD2
+L16 12
+Vo:9;IJY@LofJPC3b@Y>=L0
+!s100 20<5a;2;OGd<KX:^UW3`D0
 R6
 31
 R7
 !i10b 1
 R8
-R28
 R29
+R30
 !i113 1
 R11
 R12
