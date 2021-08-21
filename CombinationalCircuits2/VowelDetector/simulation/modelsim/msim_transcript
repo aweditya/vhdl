@@ -1,89 +1,63 @@
-# do DUT_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do DUT_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# vlib rtl_work
-# vmap work rtl_work
+# vlib gate_work
+# vmap work gate_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
+# vmap work gate_work 
 # Copying /home/aditya/tools/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Gates.vhd}
+# vcom -93 -work work {DUT.vho}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:38:06 on Aug 17,2021
-# vcom -reportprogress 300 -93 -work work /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Gates.vhd 
+# Start time: 18:18:13 on Aug 17,2021
+# vcom -reportprogress 300 -93 -work work DUT.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling package Gates
-# -- Compiling entity INVERTER
-# -- Compiling architecture Equations of INVERTER
-# -- Compiling entity AND_2
-# -- Compiling architecture Equations of AND_2
-# -- Compiling entity NAND_2
-# -- Compiling architecture Equations of NAND_2
-# -- Compiling entity OR_2
-# -- Compiling architecture Equations of OR_2
-# -- Compiling entity NOR_2
-# -- Compiling architecture Equations of NOR_2
-# -- Compiling entity XOR_2
-# -- Compiling architecture Equations of XOR_2
-# -- Compiling entity XNOR_2
-# -- Compiling architecture Equations of XNOR_2
-# -- Compiling entity HALF_ADDER
-# -- Compiling architecture Equations of HALF_ADDER
-# End time: 16:38:06 on Aug 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/DUT.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:38:06 on Aug 17,2021
-# vcom -reportprogress 300 -93 -work work /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/DUT.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package maxv_atom_pack
+# -- Loading package maxv_components
 # -- Compiling entity DUT
-# -- Compiling architecture DutWrap of DUT
-# End time: 16:38:06 on Aug 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:38:06 on Aug 17,2021
-# vcom -reportprogress 300 -93 -work work /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/VowelDetector.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package Gates
-# -- Compiling entity VowelDetector
-# -- Compiling architecture Struct of VowelDetector
-# End time: 16:38:06 on Aug 17,2021, Elapsed time: 0:00:00
+# -- Compiling architecture structure of DUT
+# End time: 18:18:14 on Aug 17,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {/home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Testbench.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:38:07 on Aug 17,2021
+# Start time: 18:18:14 on Aug 17,2021
 # vcom -reportprogress 300 -93 -work work /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Testbench.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Testbench
 # -- Compiling architecture Behave of Testbench
-# End time: 16:38:07 on Aug 17,2021, Elapsed time: 0:00:00
+# End time: 18:18:14 on Aug 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
-# Start time: 16:38:07 on Aug 17,2021
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /dut_instance=DUT_vhd.sdo -L maxv -L gate_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -sdftyp "/dut_instance=DUT_vhd.sdo" -L maxv -L gate_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 18:18:14 on Aug 17,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.testbench(behave)
-# Loading work.dut(dutwrap)
-# Loading work.gates
-# Loading work.voweldetector(struct)
-# Loading work.and_2(equations)
-# Loading work.xor_2(equations)
-# Loading work.nor_2(equations)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading maxv.maxv_atom_pack(body)
+# Loading maxv.maxv_components
+# Loading work.dut(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading maxv.maxv_io(behave)
+# Loading maxv.maxv_lcell(vital_le_atom)
+# Loading maxv.maxv_asynch_lcell(vital_le)
+# Loading maxv.maxv_lcell_register(vital_le_reg)
+# Loading instances from DUT_vhd.sdo
+# Loading timing data from DUT_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: /home/aditya/Projects/iitb/ee214/vhdl/CombinationalCircuits2/VowelDetector/Testbench.vhd
 # 
 # add wave *
 # view structure
@@ -93,5 +67,5 @@
 # run -all
 # ** Note: SUCCESS, all tests passed.
 #    Time: 224 ns  Iteration: 0  Instance: /testbench
-# End time: 16:39:05 on Aug 17,2021, Elapsed time: 0:00:58
+# End time: 18:18:58 on Aug 17,2021, Elapsed time: 0:00:44
 # Errors: 0, Warnings: 0
