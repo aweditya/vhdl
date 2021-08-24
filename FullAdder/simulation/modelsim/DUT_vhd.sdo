@@ -25,7 +25,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "DUT")
-  (DATE "08/03/2021 16:01:00")
+  (DATE "08/24/2021 15:28:09")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition")
@@ -34,7 +34,7 @@
 
   (CELL
     (CELLTYPE "maxv_io")
-    (INSTANCE \\input_vector\[2\]\~I\\)
+    (INSTANCE \\input_vector\[1\]\~I\\)
     (DELAY
       (ABSOLUTE
         (IOPATH padio combout (1132:1132:1132) (1132:1132:1132))
@@ -52,7 +52,7 @@
   )
   (CELL
     (CELLTYPE "maxv_io")
-    (INSTANCE \\input_vector\[1\]\~I\\)
+    (INSTANCE \\input_vector\[2\]\~I\\)
     (DELAY
       (ABSOLUTE
         (IOPATH padio combout (1132:1132:1132) (1132:1132:1132))
@@ -64,12 +64,12 @@
     (INSTANCE \\add_instance\|o1\|Y\~0\\.lecomb)
     (DELAY
       (ABSOLUTE
-        (PORT datab (4393:4393:4393) (4393:4393:4393))
-        (PORT datac (3708:3708:3708) (3708:3708:3708))
-        (PORT datad (4410:4410:4410) (4410:4410:4410))
+        (PORT dataa (3712:3712:3712) (3712:3712:3712))
+        (PORT datab (4437:4437:4437) (4437:4437:4437))
+        (PORT datac (3778:3778:3778) (3778:3778:3778))
+        (IOPATH dataa combout (914:914:914) (914:914:914))
         (IOPATH datab combout (740:740:740) (740:740:740))
         (IOPATH datac combout (511:511:511) (511:511:511))
-        (IOPATH datad combout (200:200:200) (200:200:200))
       )
     )
   )
@@ -78,12 +78,12 @@
     (INSTANCE \\add_instance\|x1\|Y\~0\\.lecomb)
     (DELAY
       (ABSOLUTE
-        (PORT datab (4392:4392:4392) (4392:4392:4392))
-        (PORT datac (3707:3707:3707) (3707:3707:3707))
-        (PORT datad (4412:4412:4412) (4412:4412:4412))
+        (PORT dataa (3714:3714:3714) (3714:3714:3714))
+        (PORT datab (4435:4435:4435) (4435:4435:4435))
+        (PORT datac (3780:3780:3780) (3780:3780:3780))
+        (IOPATH dataa combout (914:914:914) (914:914:914))
         (IOPATH datab combout (740:740:740) (740:740:740))
         (IOPATH datac combout (511:511:511) (511:511:511))
-        (IOPATH datad combout (200:200:200) (200:200:200))
       )
     )
   )
@@ -92,7 +92,7 @@
     (INSTANCE \\output_vector\[0\]\~I\\)
     (DELAY
       (ABSOLUTE
-        (PORT datain (1757:1757:1757) (1757:1757:1757))
+        (PORT datain (1829:1829:1829) (1829:1829:1829))
         (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
       )
     )
@@ -102,7 +102,7 @@
     (INSTANCE \\output_vector\[1\]\~I\\)
     (DELAY
       (ABSOLUTE
-        (PORT datain (1773:1773:1773) (1773:1773:1773))
+        (PORT datain (2242:2242:2242) (2242:2242:2242))
         (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
       )
     )

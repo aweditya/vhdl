@@ -67,3 +67,8 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Testbench -section_id Tes
 set_global_assignment -name EDA_TEST_BENCH_FILE TRACEFILE.txt -section_id Testbench.vhd
 set_global_assignment -name EDA_TEST_BENCH_FILE Testbench.vhd -section_id Testbench.vhd
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
+set_location_assignment PIN_48 -to input_vector[2]
+set_location_assignment PIN_45 -to input_vector[1]
+set_location_assignment PIN_44 -to input_vector[0]
+set_location_assignment PIN_58 -to output_vector[1]
+set_location_assignment PIN_57 -to output_vector[0]

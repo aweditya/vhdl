@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Tue Aug  3 16:00:52 2021
+Tue Aug 24 15:28:01 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Aug  3 16:00:52 2021       ;
+; Analysis & Synthesis Status ; Successful - Tue Aug 24 15:28:01 2021       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; DUT                                         ;
@@ -140,15 +140,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; Full_Adder.vhd                   ; yes             ; User VHDL File  ; /home/aditya/Projects/iitb/vhdl/FullAdder/Full_Adder.vhd ;         ;
-; Gates.vhd                        ; yes             ; User VHDL File  ; /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd      ;         ;
-; DUT.vhd                          ; yes             ; User VHDL File  ; /home/aditya/Projects/iitb/vhdl/FullAdder/DUT.vhd        ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; Full_Adder.vhd                   ; yes             ; User VHDL File  ; /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Full_Adder.vhd ;         ;
+; Gates.vhd                        ; yes             ; User VHDL File  ; /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd      ;         ;
+; DUT.vhd                          ; yes             ; User VHDL File  ; /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/DUT.vhd        ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -219,51 +219,51 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Aug  3 16:00:31 2021
+    Info: Processing started: Tue Aug 24 15:27:45 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FullAdder -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file Full_Adder.vhd
-    Info (12022): Found design unit 1: Full_Adder-Struct File: /home/aditya/Projects/iitb/vhdl/FullAdder/Full_Adder.vhd Line: 11
-    Info (12023): Found entity 1: Full_Adder File: /home/aditya/Projects/iitb/vhdl/FullAdder/Full_Adder.vhd Line: 7
+    Info (12022): Found design unit 1: Full_Adder-Struct File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Full_Adder.vhd Line: 11
+    Info (12023): Found entity 1: Full_Adder File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Full_Adder.vhd Line: 7
 Info (12021): Found 17 design units, including 8 entities, in source file Gates.vhd
-    Info (12022): Found design unit 1: Gates File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 4
-    Info (12022): Found design unit 2: INVERTER-Equations File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 45
-    Info (12022): Found design unit 3: AND_2-Equations File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 56
-    Info (12022): Found design unit 4: NAND_2-Equations File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 67
-    Info (12022): Found design unit 5: OR_2-Equations File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 78
-    Info (12022): Found design unit 6: NOR_2-Equations File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 89
-    Info (12022): Found design unit 7: XOR_2-Equations File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 100
-    Info (12022): Found design unit 8: XNOR_2-Equations File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 111
-    Info (12022): Found design unit 9: HALF_ADDER-Equations File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 122
-    Info (12023): Found entity 1: INVERTER File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 41
-    Info (12023): Found entity 2: AND_2 File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 52
-    Info (12023): Found entity 3: NAND_2 File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 63
-    Info (12023): Found entity 4: OR_2 File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 74
-    Info (12023): Found entity 5: NOR_2 File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 85
-    Info (12023): Found entity 6: XOR_2 File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 96
-    Info (12023): Found entity 7: XNOR_2 File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 107
-    Info (12023): Found entity 8: HALF_ADDER File: /home/aditya/Projects/iitb/vhdl/FullAdder/Gates.vhd Line: 118
+    Info (12022): Found design unit 1: Gates File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 4
+    Info (12022): Found design unit 2: INVERTER-Equations File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 45
+    Info (12022): Found design unit 3: AND_2-Equations File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 56
+    Info (12022): Found design unit 4: NAND_2-Equations File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 67
+    Info (12022): Found design unit 5: OR_2-Equations File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 78
+    Info (12022): Found design unit 6: NOR_2-Equations File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 89
+    Info (12022): Found design unit 7: XOR_2-Equations File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 100
+    Info (12022): Found design unit 8: XNOR_2-Equations File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 111
+    Info (12022): Found design unit 9: HALF_ADDER-Equations File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 122
+    Info (12023): Found entity 1: INVERTER File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 41
+    Info (12023): Found entity 2: AND_2 File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 52
+    Info (12023): Found entity 3: NAND_2 File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 63
+    Info (12023): Found entity 4: OR_2 File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 74
+    Info (12023): Found entity 5: NOR_2 File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 85
+    Info (12023): Found entity 6: XOR_2 File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 96
+    Info (12023): Found entity 7: XNOR_2 File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 107
+    Info (12023): Found entity 8: HALF_ADDER File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Gates.vhd Line: 118
 Info (12021): Found 2 design units, including 1 entities, in source file DUT.vhd
-    Info (12022): Found design unit 1: DUT-DutWrap File: /home/aditya/Projects/iitb/vhdl/FullAdder/DUT.vhd Line: 13
-    Info (12023): Found entity 1: DUT File: /home/aditya/Projects/iitb/vhdl/FullAdder/DUT.vhd Line: 8
+    Info (12022): Found design unit 1: DUT-DutWrap File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/DUT.vhd Line: 13
+    Info (12023): Found entity 1: DUT File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/DUT.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file Testbench.vhd
-    Info (12022): Found design unit 1: Testbench-Behave File: /home/aditya/Projects/iitb/vhdl/FullAdder/Testbench.vhd Line: 9
-    Info (12023): Found entity 1: Testbench File: /home/aditya/Projects/iitb/vhdl/FullAdder/Testbench.vhd Line: 7
+    Info (12022): Found design unit 1: Testbench-Behave File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Testbench.vhd Line: 9
+    Info (12023): Found entity 1: Testbench File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Testbench.vhd Line: 7
 Info (12127): Elaborating entity "DUT" for the top level hierarchy
-Info (12128): Elaborating entity "Full_Adder" for hierarchy "Full_Adder:add_instance" File: /home/aditya/Projects/iitb/vhdl/FullAdder/DUT.vhd Line: 21
-Info (12128): Elaborating entity "HALF_ADDER" for hierarchy "Full_Adder:add_instance|HALF_ADDER:ha" File: /home/aditya/Projects/iitb/vhdl/FullAdder/Full_Adder.vhd Line: 15
-Info (12128): Elaborating entity "AND_2" for hierarchy "Full_Adder:add_instance|AND_2:a1" File: /home/aditya/Projects/iitb/vhdl/FullAdder/Full_Adder.vhd Line: 19
-Info (12128): Elaborating entity "OR_2" for hierarchy "Full_Adder:add_instance|OR_2:o1" File: /home/aditya/Projects/iitb/vhdl/FullAdder/Full_Adder.vhd Line: 20
-Info (12128): Elaborating entity "XOR_2" for hierarchy "Full_Adder:add_instance|XOR_2:x1" File: /home/aditya/Projects/iitb/vhdl/FullAdder/Full_Adder.vhd Line: 23
+Info (12128): Elaborating entity "Full_Adder" for hierarchy "Full_Adder:add_instance" File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/DUT.vhd Line: 21
+Info (12128): Elaborating entity "HALF_ADDER" for hierarchy "Full_Adder:add_instance|HALF_ADDER:ha" File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Full_Adder.vhd Line: 15
+Info (12128): Elaborating entity "AND_2" for hierarchy "Full_Adder:add_instance|AND_2:a1" File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Full_Adder.vhd Line: 19
+Info (12128): Elaborating entity "OR_2" for hierarchy "Full_Adder:add_instance|OR_2:o1" File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Full_Adder.vhd Line: 20
+Info (12128): Elaborating entity "XOR_2" for hierarchy "Full_Adder:add_instance|XOR_2:x1" File: /home/aditya/Projects/iitb/ee214/vhdl/FullAdder/Full_Adder.vhd Line: 23
 Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 2 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 397 megabytes
-    Info: Processing ended: Tue Aug  3 16:00:52 2021
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Peak virtual memory: 399 megabytes
+    Info: Processing ended: Tue Aug 24 15:28:01 2021
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:38
 
 

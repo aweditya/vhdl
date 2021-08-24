@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "08/03/2021 16:01:00"
+-- DATE "08/24/2021 15:28:08"
 
 -- 
 -- Device: Altera 5M1270ZT144C5 Package TQFP144
@@ -66,29 +66,7 @@ ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
--- Location: PIN_1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\input_vector[2]~I\ : maxv_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "input")
--- pragma translate_on
-PORT MAP (
-	oe => GND,
-	padio => ww_input_vector(2),
-	combout => \input_vector~combout\(2));
-
--- Location: PIN_5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\input_vector[0]~I\ : maxv_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "input")
--- pragma translate_on
-PORT MAP (
-	oe => GND,
-	padio => ww_input_vector(0),
-	combout => \input_vector~combout\(0));
-
--- Location: PIN_143,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_45,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \input_vector[1]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -99,14 +77,36 @@ PORT MAP (
 	padio => ww_input_vector(1),
 	combout => \input_vector~combout\(1));
 
--- Location: LC_X3_Y9_N2
+-- Location: PIN_44,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\input_vector[0]~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_input_vector(0),
+	combout => \input_vector~combout\(0));
+
+-- Location: PIN_48,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\input_vector[2]~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_input_vector(2),
+	combout => \input_vector~combout\(2));
+
+-- Location: LC_X7_Y4_N2
 \add_instance|o1|Y~0\ : maxv_lcell
 -- Equation(s):
--- \add_instance|o1|Y~0_combout\ = ((\input_vector~combout\(2) & ((\input_vector~combout\(0)) # (\input_vector~combout\(1)))) # (!\input_vector~combout\(2) & (\input_vector~combout\(0) & \input_vector~combout\(1))))
+-- \add_instance|o1|Y~0_combout\ = (\input_vector~combout\(1) & ((\input_vector~combout\(0)) # ((\input_vector~combout\(2))))) # (!\input_vector~combout\(1) & (\input_vector~combout\(0) & (\input_vector~combout\(2))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fcc0",
+	lut_mask => "e8e8",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -114,21 +114,21 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datab => \input_vector~combout\(2),
-	datac => \input_vector~combout\(0),
-	datad => \input_vector~combout\(1),
+	dataa => \input_vector~combout\(1),
+	datab => \input_vector~combout\(0),
+	datac => \input_vector~combout\(2),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \add_instance|o1|Y~0_combout\);
 
--- Location: LC_X3_Y9_N4
+-- Location: LC_X7_Y4_N4
 \add_instance|x1|Y~0\ : maxv_lcell
 -- Equation(s):
--- \add_instance|x1|Y~0_combout\ = (\input_vector~combout\(2) $ (\input_vector~combout\(0) $ (\input_vector~combout\(1))))
+-- \add_instance|x1|Y~0_combout\ = \input_vector~combout\(1) $ (\input_vector~combout\(0) $ ((\input_vector~combout\(2))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "c33c",
+	lut_mask => "9696",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -136,14 +136,14 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datab => \input_vector~combout\(2),
-	datac => \input_vector~combout\(0),
-	datad => \input_vector~combout\(1),
+	dataa => \input_vector~combout\(1),
+	datab => \input_vector~combout\(0),
+	datac => \input_vector~combout\(2),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \add_instance|x1|Y~0_combout\);
 
--- Location: PIN_6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_57,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \output_vector[0]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -154,7 +154,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_output_vector(0));
 
--- Location: PIN_142,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_58,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \output_vector[1]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
