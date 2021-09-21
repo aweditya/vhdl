@@ -1,0 +1,497 @@
+|DUT
+input_vector[0] => atm:add_instance.amount[0]
+input_vector[1] => atm:add_instance.amount[1]
+input_vector[2] => atm:add_instance.amount[2]
+input_vector[3] => atm:add_instance.amount[3]
+input_vector[4] => atm:add_instance.amount[4]
+input_vector[5] => atm:add_instance.amount[5]
+input_vector[6] => atm:add_instance.amount[6]
+input_vector[7] => atm:add_instance.amount[7]
+output_vector[0] << atm:add_instance.abc[0]
+output_vector[1] << atm:add_instance.abc[1]
+output_vector[2] << atm:add_instance.abc[2]
+output_vector[3] << atm:add_instance.abc[3]
+output_vector[4] << atm:add_instance.abc[4]
+output_vector[5] << atm:add_instance.abc[5]
+output_vector[6] << atm:add_instance.abc[6]
+output_vector[7] << atm:add_instance.abc[7]
+output_vector[8] << atm:add_instance.abc[8]
+output_vector[9] << atm:add_instance.priority[0]
+output_vector[10] << atm:add_instance.priority[1]
+
+
+|DUT|atm:add_instance
+amount[0] => div:divby100.Nu[0]
+amount[1] => div:divby100.Nu[1]
+amount[2] => div:divby100.Nu[2]
+amount[3] => div:divby100.Nu[3]
+amount[4] => div:divby100.Nu[4]
+amount[5] => div:divby100.Nu[5]
+amount[6] => div:divby100.Nu[6]
+amount[7] => div:divby100.Nu[7]
+priority[0] <= OR_2:computep0.Y
+priority[1] <= OR_2:computep1.Y
+abc[0] <= OR_2:computec0.Y
+abc[1] <= OR_2:computec1.Y
+abc[2] <= OR_2:computec2.Y
+abc[3] <= OR_2:computec3.Y
+abc[4] <= OR_2:computec4.Y
+abc[5] <= OR_2:computec5.Y
+abc[6] <= OR_2:computeb0.Y
+abc[7] <= OR_2:computea0.Y
+abc[8] <= OR_2:computea1.Y
+
+
+|DUT|atm:add_instance|div:divby100
+Nu[0] => borrow.IN0
+Nu[0] => borrow.IN0
+Nu[0] => pr.DATAA
+Nu[1] => borrow.IN0
+Nu[1] => borrow.IN0
+Nu[1] => \division:pr[7][8].DATAA
+Nu[2] => borrow.IN0
+Nu[2] => borrow.IN0
+Nu[2] => \division:pr[6][8].DATAA
+Nu[3] => borrow.IN0
+Nu[3] => borrow.IN0
+Nu[3] => \division:pr[5][8].DATAA
+Nu[4] => borrow.IN0
+Nu[4] => borrow.IN0
+Nu[4] => \division:pr[4][8].DATAA
+Nu[5] => borrow.IN0
+Nu[5] => borrow.IN0
+Nu[5] => \division:pr[3][8].DATAA
+Nu[6] => borrow.IN0
+Nu[6] => borrow.IN0
+Nu[6] => \division:pr[2][8].DATAA
+Nu[7] => diff.IN0
+Nu[7] => borrow.IN0
+Nu[7] => \division:pr[1][8].DATAA
+D[0] => diff.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[1] => diff.IN1
+D[1] => borrow.IN1
+D[1] => diff.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[2] => diff.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => diff.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[3] => diff.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => diff.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[4] => diff.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => diff.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[5] => diff.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => diff.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[6] => diff.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => diff.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => diff.IN1
+D[7] => borrow.IN1
+RQ[0] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[1] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[2] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[3] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[4] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[5] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[6] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[7] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[8] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[9] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[10] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[11] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[12] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[13] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[14] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[15] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|div:divby50
+Nu[0] => borrow.IN0
+Nu[0] => borrow.IN0
+Nu[0] => pr.DATAA
+Nu[1] => borrow.IN0
+Nu[1] => borrow.IN0
+Nu[1] => \division:pr[7][8].DATAA
+Nu[2] => borrow.IN0
+Nu[2] => borrow.IN0
+Nu[2] => \division:pr[6][8].DATAA
+Nu[3] => borrow.IN0
+Nu[3] => borrow.IN0
+Nu[3] => \division:pr[5][8].DATAA
+Nu[4] => borrow.IN0
+Nu[4] => borrow.IN0
+Nu[4] => \division:pr[4][8].DATAA
+Nu[5] => borrow.IN0
+Nu[5] => borrow.IN0
+Nu[5] => \division:pr[3][8].DATAA
+Nu[6] => borrow.IN0
+Nu[6] => borrow.IN0
+Nu[6] => \division:pr[2][8].DATAA
+Nu[7] => diff.IN0
+Nu[7] => borrow.IN0
+Nu[7] => \division:pr[1][8].DATAA
+D[0] => diff.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[1] => diff.IN1
+D[1] => borrow.IN1
+D[1] => diff.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[2] => diff.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => diff.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[3] => diff.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => diff.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[4] => diff.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => diff.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[4] => borrow.IN1
+D[5] => diff.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => diff.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[5] => borrow.IN1
+D[6] => diff.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => diff.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[6] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => borrow.IN1
+D[7] => diff.IN1
+D[7] => borrow.IN1
+RQ[0] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[1] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[2] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[3] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[4] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[5] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[6] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[7] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[8] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[9] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[10] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[11] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[12] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[13] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[14] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[15] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:a1ora0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:computep1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|INVERTER:invb0
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:c5orc4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:c5orc4orc3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:c5orc4orc3orc2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:c5orc4orc3orc2orc1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:c5orc4orc3orc2orc1orc0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|AND_2:invb0andc
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:computep0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:computea1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:computea0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:computeb0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:computec5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:computec4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:computec3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:computec2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:computec1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|atm:add_instance|OR_2:computec0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
