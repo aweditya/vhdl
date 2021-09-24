@@ -1,0 +1,66 @@
+# do DUT_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/aditya/tools/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/4Bit4x1Mux/DUT.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:19:21 on Sep 24,2021
+# vcom -reportprogress 300 -93 -work work /home/aditya/Projects/iitb/ee214/vhdl/Behavioural/4Bit4x1Mux/DUT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 20:19:21 on Sep 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/4Bit4x1Mux/Mux4Bit4x1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:19:21 on Sep 24,2021
+# vcom -reportprogress 300 -93 -work work /home/aditya/Projects/iitb/ee214/vhdl/Behavioural/4Bit4x1Mux/Mux4Bit4x1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux4Bit4x1
+# -- Compiling architecture Beh of Mux4Bit4x1
+# End time: 20:19:21 on Sep 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/4Bit4x1Mux/Testbench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:19:21 on Sep 24,2021
+# vcom -reportprogress 300 -93 -work work /home/aditya/Projects/iitb/ee214/vhdl/Behavioural/4Bit4x1Mux/Testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 20:19:21 on Sep 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 20:19:21 on Sep 24,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading work.mux4bit4x1(beh)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 6291456 ns  Iteration: 0  Instance: /testbench
+# End time: 20:19:41 on Sep 24,2021, Elapsed time: 0:00:20
+# Errors: 0, Warnings: 0

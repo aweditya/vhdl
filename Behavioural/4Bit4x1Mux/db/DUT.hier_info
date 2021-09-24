@@ -1,0 +1,54 @@
+|DUT
+input_vector[0] => Mux4Bit4x1:add_instance.sel[0]
+input_vector[1] => Mux4Bit4x1:add_instance.sel[1]
+input_vector[2] => Mux4Bit4x1:add_instance.A[0]
+input_vector[3] => Mux4Bit4x1:add_instance.A[1]
+input_vector[4] => Mux4Bit4x1:add_instance.A[2]
+input_vector[5] => Mux4Bit4x1:add_instance.A[3]
+input_vector[6] => Mux4Bit4x1:add_instance.B[0]
+input_vector[7] => Mux4Bit4x1:add_instance.B[1]
+input_vector[8] => Mux4Bit4x1:add_instance.B[2]
+input_vector[9] => Mux4Bit4x1:add_instance.B[3]
+input_vector[10] => Mux4Bit4x1:add_instance.C[0]
+input_vector[11] => Mux4Bit4x1:add_instance.C[1]
+input_vector[12] => Mux4Bit4x1:add_instance.C[2]
+input_vector[13] => Mux4Bit4x1:add_instance.C[3]
+input_vector[14] => Mux4Bit4x1:add_instance.D[0]
+input_vector[15] => Mux4Bit4x1:add_instance.D[1]
+input_vector[16] => Mux4Bit4x1:add_instance.D[2]
+input_vector[17] => Mux4Bit4x1:add_instance.D[3]
+output_vector[0] <= Mux4Bit4x1:add_instance.Y[0]
+output_vector[1] <= Mux4Bit4x1:add_instance.Y[1]
+output_vector[2] <= Mux4Bit4x1:add_instance.Y[2]
+output_vector[3] <= Mux4Bit4x1:add_instance.Y[3]
+
+
+|DUT|Mux4Bit4x1:add_instance
+A[0] => output.DATAB
+A[1] => output.DATAB
+A[2] => output.DATAB
+A[3] => output.DATAB
+B[0] => output.DATAB
+B[1] => output.DATAB
+B[2] => output.DATAB
+B[3] => output.DATAB
+C[0] => output.DATAB
+C[1] => output.DATAB
+C[2] => output.DATAB
+C[3] => output.DATAB
+D[0] => output.DATAA
+D[1] => output.DATAA
+D[2] => output.DATAA
+D[3] => output.DATAA
+sel[0] => Equal0.IN1
+sel[0] => Equal1.IN1
+sel[0] => Equal2.IN0
+sel[1] => Equal0.IN0
+sel[1] => Equal1.IN0
+sel[1] => Equal2.IN1
+Y[0] <= output.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= output.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= output.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
