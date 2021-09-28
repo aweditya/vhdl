@@ -65,8 +65,8 @@ CHIP  "DUT"  ASSIGNED TO AN: 5M1270ZT144C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-input_vector[3]              : 1         : input  : 3.3-V LVTTL       :         : 1         : N              
-input_vector[1]              : 2         : input  : 3.3-V LVTTL       :         : 1         : N              
+input_vector[1]              : 1         : input  : 3.3-V LVTTL       :         : 1         : N              
+input_vector[3]              : 2         : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 3         :        :                   :         : 1         :                
 GND*                         : 4         :        :                   :         : 1         :                
 GND*                         : 5         :        :                   :         : 1         :                
@@ -205,7 +205,7 @@ GND*                         : 137       :        :                   :         
 GND*                         : 138       :        :                   :         : 2         :                
 GND*                         : 139       :        :                   :         : 2         :                
 GND*                         : 140       :        :                   :         : 2         :                
-input_vector[2]              : 141       : input  : 3.3-V LVTTL       :         : 2         : N              
+input_vector[0]              : 141       : input  : 3.3-V LVTTL       :         : 2         : N              
 output_vector[0]             : 142       : output : 3.3-V LVTTL       :         : 2         : N              
-input_vector[0]              : 143       : input  : 3.3-V LVTTL       :         : 2         : N              
+input_vector[2]              : 143       : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 144       :        :                   :         : 2         :                

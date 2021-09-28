@@ -25,7 +25,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "DUT")
-  (DATE "09/24/2021 21:30:02")
+  (DATE "09/28/2021 17:14:50")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition")
@@ -34,16 +34,7 @@
 
   (CELL
     (CELLTYPE "maxv_io")
-    (INSTANCE \\input_vector\[0\]\~I\\)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH padio combout (1132:1132:1132) (1132:1132:1132))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "maxv_io")
-    (INSTANCE \\input_vector\[1\]\~I\\)
+    (INSTANCE \\input_vector\[2\]\~I\\)
     (DELAY
       (ABSOLUTE
         (IOPATH padio combout (1132:1132:1132) (1132:1132:1132))
@@ -61,7 +52,16 @@
   )
   (CELL
     (CELLTYPE "maxv_io")
-    (INSTANCE \\input_vector\[2\]\~I\\)
+    (INSTANCE \\input_vector\[1\]\~I\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (1132:1132:1132) (1132:1132:1132))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxv_io")
+    (INSTANCE \\input_vector\[0\]\~I\\)
     (DELAY
       (ABSOLUTE
         (IOPATH padio combout (1132:1132:1132) (1132:1132:1132))

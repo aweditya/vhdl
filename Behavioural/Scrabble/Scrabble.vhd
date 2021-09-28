@@ -15,19 +15,11 @@ end entity Scrabble;
 architecture Beh of Scrabble is
 begin
 	check_score : process ( X )
-		variable output : std_logic;
 	begin 
-		if X = "0001" then
-			output := '1';
-		elsif X = "0010" then
-			output := '1';
-		elsif X = "1101" then
-			output := '1';
-		elsif X = "1110" then
-			output := '1';
+		if (X = "0001") or (X = "0010") or (X = "1101") or (X = "1110") then
+			Y <= '1';
 		else
-			output := '0';
+			Y <= '0';
 		end if;
-	Y <= output;
 	end process; -- end process check_score
 end Beh; -- end behavioural description

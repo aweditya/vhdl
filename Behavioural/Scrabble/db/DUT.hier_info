@@ -3,7 +3,7 @@ input_vector[0] => Scrabble:add_instance.X[0]
 input_vector[1] => Scrabble:add_instance.X[1]
 input_vector[2] => Scrabble:add_instance.X[2]
 input_vector[3] => Scrabble:add_instance.X[3]
-output_vector[0] <= Scrabble:add_instance.Y
+output_vector[0] << Scrabble:add_instance.Y
 
 
 |DUT|Scrabble:add_instance
@@ -23,6 +23,6 @@ X[3] => Equal0.IN0
 X[3] => Equal1.IN0
 X[3] => Equal2.IN1
 X[3] => Equal3.IN1
-Y <= output.DB_MAX_OUTPUT_PORT_TYPE
+Y <= check_score.DB_MAX_OUTPUT_PORT_TYPE
 
 
