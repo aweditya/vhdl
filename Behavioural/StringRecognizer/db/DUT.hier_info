@@ -1,0 +1,46 @@
+|DUT
+input_vector[0] => CovidRecognizer:add_instance.clock
+input_vector[1] => CovidRecognizer:add_instance.reset
+input_vector[2] => CovidRecognizer:add_instance.input[0]
+input_vector[3] => CovidRecognizer:add_instance.input[1]
+input_vector[4] => CovidRecognizer:add_instance.input[2]
+input_vector[5] => CovidRecognizer:add_instance.input[3]
+input_vector[6] => CovidRecognizer:add_instance.input[4]
+output_vector[0] << CovidRecognizer:add_instance.output
+
+
+|DUT|CovidRecognizer:add_instance
+input[0] => Equal0.IN9
+input[0] => Equal1.IN9
+input[0] => Equal2.IN9
+input[0] => Equal3.IN9
+input[0] => Equal4.IN9
+input[1] => Equal0.IN8
+input[1] => Equal1.IN8
+input[1] => Equal2.IN8
+input[1] => Equal3.IN8
+input[1] => Equal4.IN8
+input[2] => Equal0.IN7
+input[2] => Equal1.IN7
+input[2] => Equal2.IN7
+input[2] => Equal3.IN7
+input[2] => Equal4.IN7
+input[3] => Equal0.IN6
+input[3] => Equal1.IN6
+input[3] => Equal2.IN6
+input[3] => Equal3.IN6
+input[3] => Equal4.IN6
+input[4] => Equal0.IN5
+input[4] => Equal1.IN5
+input[4] => Equal2.IN5
+input[4] => Equal3.IN5
+input[4] => Equal4.IN5
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+clock => present_state~1.DATAIN
+output <= output_process.DB_MAX_OUTPUT_PORT_TYPE
+
+
