@@ -1,0 +1,7 @@
+
+State Machine - |DUT|SerialComparator:add_instance|present_state
+Name present_state.EQUAL_TO present_state.LESS_THAN present_state.GREATER_THAN present_state.RST 
+present_state.RST 0 0 0 0 
+present_state.GREATER_THAN 0 0 1 1 
+present_state.LESS_THAN 0 1 0 1 
+present_state.EQUAL_TO 1 0 0 1 
