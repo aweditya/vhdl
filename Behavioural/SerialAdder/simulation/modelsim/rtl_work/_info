@@ -1,0 +1,136 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/simulation/modelsim
+Edut
+Z1 w1633438069
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/DUT.vhd
+Z5 F/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/DUT.vhd
+l0
+L8 1
+V7?J7D3L8bN]f8oRODQ;JD1
+!s100 DNh?7e`;k5LzHhC`:<>Ko3
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1633439574
+!i10b 1
+Z8 !s108 1633439574.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/DUT.vhd|
+Z10 !s107 /home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/DUT.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 7?J7D3L8bN]f8oRODQ;JD1
+!i122 1
+l20
+L13 22
+VlTLIL8oTX8m7mm6d;R56i1
+!s100 ZQ<OK^EHj62jbInZdhoT03
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eserialadder
+Z13 w1633439523
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 0
+R0
+Z15 8/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/SerialAdder.vhd
+Z16 F/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/SerialAdder.vhd
+l0
+L6 1
+V;]4CTh[o<APP^eH:RaboS1
+!s100 2UO:CLl^dATf_KT=6hna40
+R6
+31
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/SerialAdder.vhd|
+Z18 !s107 /home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/SerialAdder.vhd|
+!i113 1
+R11
+R12
+Abeh
+R14
+R2
+R3
+DEx4 work 11 serialadder 0 22 ;]4CTh[o<APP^eH:RaboS1
+!i122 0
+l23
+L14 59
+VckL:c[GPeKB^PJZ:m@:^W1
+!s100 :f>6aImmMHFHb1o?jInEc3
+R6
+31
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Etestbench
+Z19 w1633436641
+R3
+R2
+!i122 2
+R0
+Z20 8/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/Testbench.vhd
+Z21 F/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/Testbench.vhd
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/Testbench.vhd|
+!s107 /home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/Testbench.vhd|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 2
+l68
+L9 131
+Vl?^X6B?9z3MiF93^ZP?Ko3
+!s100 I`>`1@DGR>]:fE1bUSc0Z0
+R6
+31
+R7
+!i10b 1
+R8
+R22
+Z23 !s107 /home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/Testbench.vhd|
+!i113 1
+R11
+R12

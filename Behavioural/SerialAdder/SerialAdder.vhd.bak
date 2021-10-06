@@ -1,0 +1,76 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-- entity to model word Serial adder
+entity SerialAdder is
+	port (reset : in std_logic; 
+			A, B : in std_logic; 
+			clock : in std_logic: 
+			S : out std_logic);
+end SerialAdder;
+
+-- Behavioural description of the entity
+architecture beh of SerialAdder is
+	-- Define a state type
+	-- States are in terms of the input carry
+	-- C0: no input carry
+	-- C1: input carry is present
+	type state is (C0, C1);
+
+	-- Define signals for present state and next state initialised in C0
+	signal present_state, next_state : state := C0;
+	begin
+		-- Process for clock behaviour
+		clock_process : process(clock, reset)
+		begin
+			if(clock = '1' and clock'event) then
+				if(reset = '1') then
+				-- Fill the code here
+					present_state <= C0;
+				else
+				-- Fill the code here
+					present_state <= next_state;
+				end if;
+			end if;
+		end process clock_process;
+		
+		-- Temporary variable to store carry generated from addition
+		variable carry : std_logic := '0'; 
+		
+		-- Process to describe state transitions and print output
+		state_transition_process : process(input, present_state)
+		begin
+			-- If Cin = 0
+			if present_state = C0 then
+				-- Sum and carry logic
+				S <= A xor B;
+				carry <= A and B;
+				
+				-- If carry = 1, transition to C1
+				-- If carry = 0, do not transition
+				if carry = '1' then
+					next_state <= C1;
+				else
+					next_state <= present_state;
+				end if;
+				
+			-- If Cin = 1
+			elsif present_state = C1 then
+				S < = not (A xor B);
+				carry <= A or B;
+				
+				-- If carry = 1, do not transition
+				-- If carry = 0, transition to C0
+				if carry = '0' then
+					next_state <= C0;
+				else
+					next_state <= present_state;
+				end if;
+				
+			-- Default state is C0
+			else
+				next_state <= C0;
+			endif;
+		end process state_transition_process;
+end beh;
