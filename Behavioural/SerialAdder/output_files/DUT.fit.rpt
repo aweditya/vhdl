@@ -1,5 +1,5 @@
 Fitter report for DUT
-Tue Oct  5 18:58:15 2021
+Wed Oct  6 19:01:44 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Tue Oct  5 18:58:15 2021       ;
+; Fitter Status         ; Successful - Wed Oct  6 19:01:44 2021       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; DUT                                         ;
 ; Top-level Entity Name ; DUT                                         ;
@@ -591,10 +591,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/output_files/DUT.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 533 megabytes
-    Info: Processing ended: Tue Oct  5 18:58:15 2021
+    Info: Peak virtual memory: 526 megabytes
+    Info: Processing ended: Wed Oct  6 19:01:44 2021
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +----------------------------+

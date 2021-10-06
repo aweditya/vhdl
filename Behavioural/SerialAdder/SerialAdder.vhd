@@ -1,8 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
 
--- entity to model word Serial adder
+-- entity to model a Serial adder
 entity SerialAdder is
 	port (reset : in std_logic; 
 			A, B : in std_logic; 
@@ -25,7 +24,11 @@ architecture beh of SerialAdder is
 		clock_process : process(clock, reset)
 		begin
 			if(clock = '1' and clock'event) then
-				present_state <= next_state;
+				if (reset = '1') then
+					present_state <= C0;
+				else 
+					present_state <= next_state;
+				end if;
 			end if;
 		end process clock_process;
 				
@@ -33,36 +36,32 @@ architecture beh of SerialAdder is
 		state_transition_process : process(reset, A, B, present_state)
 			variable carry : std_logic := '0';
 		begin 
-			if reset = '0' then 
-				case present_state is 
-					when C0 =>
-						carry := A and B;
-						
-						-- If carry = 1, transition to C1
-						-- If carry = 0, do not transition
-						if carry = '1' then
-							next_state <= C1;
-						else
-							next_state <= present_state;
-						end if;
+			case present_state is 
+				when C0 =>
+					carry := A and B;
 					
-					when C1 =>				
-						carry := A or B;
-						
-						-- If carry = 1, do not transition
-						-- If carry = 0, transition to C0
-						if carry = '0' then
-							next_state <= C0;
-						else
-							next_state <= present_state;
-						end if;
-					
-					when others => 
+					-- If carry = 1, transition to C1
+					-- If carry = 0, do not transition
+					if carry = '1' then
+						next_state <= C1;
+					else
 						next_state <= C0;
-				end case;
-		else 
-			next_state <= C0;
-		end if;
+					end if;
+				
+				when C1 =>					
+					carry := A or B;
+					
+					-- If carry = 1, do not transition
+					-- If carry = 0, transition to C0
+					if carry = '0' then
+						next_state <= C0;
+					else
+						next_state <= C1;
+					end if;
+				
+				when others => 
+					next_state <= C0;
+			end case;
 		end process state_transition_process;
 		
 		-- Process to print the output

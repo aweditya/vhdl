@@ -7,8 +7,8 @@ output_vector[0] << SerialAdder:add_instance.S
 
 
 |DUT|SerialAdder:add_instance
+reset => present_state.OUTPUTSELECT
 reset => S.OUTPUTSELECT
-reset => next_state.OUTPUTSELECT
 A => carry.IN0
 A => carry.IN0
 A => S.IN0

@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/SerialAdder/simulation/modelsim
 Edut
-Z1 w1633440500
+Z1 w1633527109
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx4 maxv 14 maxv_atom_pack 0 22 DA=HhE]4cXbV_NTemfNUC2
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -27,9 +27,9 @@ VC68gT=9:V4XX?SAVbPYV:1
 !s100 QAjMAI>6gYjiD^QallC9B3
 Z10 OV;C;2020.1;71
 31
-Z11 !s110 1633440512
+Z11 !s110 1633527287
 !i10b 1
-Z12 !s108 1633440512.000000
+Z12 !s108 1633527287.000000
 Z13 !s90 -reportprogress|300|-93|-work|work|DUT.vho|
 Z14 !s107 DUT.vho|
 !i113 1
