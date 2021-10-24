@@ -1,0 +1,7 @@
+
+State Machine - |timer_controller|present_state
+Name present_state.timer3 present_state.timer2 present_state.timer1 present_state.RST 
+present_state.RST 0 0 0 0 
+present_state.timer1 0 0 1 1 
+present_state.timer2 0 1 0 1 
+present_state.timer3 1 0 0 1 

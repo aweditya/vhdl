@@ -1,0 +1,71 @@
+# do timer_controller_tb_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying /home/aditya/tools/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {timer_controller_tb.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:59:55 on Oct 24,2021
+# vcom -reportprogress 300 -93 -work work timer_controller_tb.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package maxv_atom_pack
+# -- Loading package maxv_components
+# -- Compiling entity timer_controller
+# -- Compiling architecture structure of timer_controller
+# End time: 12:59:55 on Oct 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {/home/aditya/Projects/iitb/ee214/vhdl/Behavioural/TimerController/timer_controller_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:59:55 on Oct 24,2021
+# vcom -reportprogress 300 -93 -work work /home/aditya/Projects/iitb/ee214/vhdl/Behavioural/TimerController/timer_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity timer_controller_tb
+# -- Compiling architecture tb of timer_controller_tb
+# End time: 12:59:55 on Oct 24,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /dut_instance=timer_controller_tb_vhd.sdo -L maxv -L gate_work -L work -voptargs="+acc"  timer_controller_tb
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -sdftyp "/dut_instance=timer_controller_tb_vhd.sdo" -L maxv -L gate_work -L work -voptargs=""+acc"" timer_controller_tb 
+# Start time: 12:59:55 on Oct 24,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.timer_controller_tb(tb)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading maxv.maxv_atom_pack(body)
+# Loading maxv.maxv_components
+# Loading work.timer_controller(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading maxv.maxv_io(behave)
+# Loading maxv.maxv_lcell(vital_le_atom)
+# Loading maxv.maxv_asynch_lcell(vital_le)
+# Loading maxv.maxv_lcell_register(vital_le_reg)
+# Loading instances from timer_controller_tb_vhd.sdo
+# Loading timing data from timer_controller_tb_vhd.sdo
+# ** Warning: Design size of 24120 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /timer_controller_tb File: /home/aditya/Projects/iitb/ee214/vhdl/Behavioural/TimerController/timer_controller_tb.vhd
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 80 us
+# End time: 13:02:41 on Oct 24,2021, Elapsed time: 0:02:46
+# Errors: 0, Warnings: 1

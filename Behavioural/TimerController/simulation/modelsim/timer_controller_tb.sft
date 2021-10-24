@@ -1,0 +1,4 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+    {{"Slow Model"} {timer_controller_tb.vho timer_controller_tb_vhd.sdo}}
+}
